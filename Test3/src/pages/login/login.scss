@@ -1,0 +1,34 @@
+page-login {
+    
+    ion-item{
+        border-radius:5px;
+        
+    }
+  
+   
+    .log{
+        width: 80%;
+        margin-left:10%;
+        margin-top:100px;
+        border: 5px solid #48ffff;
+        border-radius: 10px;
+      
+    }
+   
+   h1{
+       text-align: center;
+       color:#46edf3;
+       background: white;
+       border: 1px solid transparent;
+       border-radius: 5px;
+       width: 60%;
+       margin-left:20%;
+       margin-right: 20%;
+   }
+   p {
+       font-style: initial;
+       font-size: 8px;
+       margin-left: 10%;
+       color:#488aff;
+   }
+}
