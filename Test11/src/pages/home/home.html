@@ -1,0 +1,40 @@
+
+<ion-header>
+  <ion-navbar color="primary"> 
+    <button ion-button (click) ="return()" ><p class="logout">se déconnecter</p></button>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h4>{{(profileData | async)?.lastName}} - {{(profileData | async)?.firstName}}  </h4> 
+  <h4> {{(profileData | async)?.age}}</h4>
+  <hr>
+  <ion-card color="primary">
+  <ion-card-content>
+    <ion-card-title>
+      <h2>PROFILE</h2>
+      </ion-card-title>
+      <hr>
+      <p> {{(profileData | async)?.adress}}</p>
+      <p> {{(profileData | async)?.phoneNumber}}</p>
+      <hr>
+      <h2>{{(profileData | async)?.establishment}}</h2>
+      <hr>
+      <p> {{(profileData | async)?.level}}</p>
+      <p> {{(profileData | async)?.identification}}</p>
+    </ion-card-content>
+  </ion-card>
+  <hr>
+  <button ion-button round small color="blue"(click)="Group()">
+    + groupe
+  </button>
+  <button ion-button clear small color="noteyou"(click)="Profil()">
+   <h5> Modifier profile</h5>
+  </button>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="primary">
+    <p>copyright 2018</p>
+  </ion-toolbar>
+</ion-footer>

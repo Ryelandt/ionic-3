@@ -1,0 +1,79 @@
+<!--
+  Generated template for the GroupPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+ 
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Créer un groupe</ion-title>
+  </ion-navbar>
+  
+  
+</ion-header>
+
+<ion-content padding>
+  <p><strong>{{(profileData | async)?.firstName}}, {{(profileData | async)?.lastName}}</strong></p>
+  <hr>
+               
+  <img src="assets/imgs/logo2.png" alt="noteyou" *ngIf="seeView">
+  <ion-card class="card" *ngIf="seeView">
+    <div class="card-title">Créé votre groupe, choisissez vos membres</div>
+    <div class="card-subtitle">Evaluez</div>
+  </ion-card>
+  <hr>                               <!-- button  created  group -->
+  <button ion-button round color="blue"(click)="showPrompt()" class="addgroupe" *ngIf="seeView">Créer groupe  
+  </button> 
+  <hr>
+  <ion-list *ngIf="hideView">        <!-- name of the  created  group -->
+    <p>Groupe en création <strong>: {{getDataN}}</strong></p>
+    <p>Selectionner les membres</p>
+                                     <!-- search bar -->
+    <ion-searchbar (ionInput)="getItems($event)" placeholder="Recherche membre" class="show" > </ion-searchbar>
+                                     <!-- list of all the members -->
+    <ion-item *ngFor="let user of userList " class="show">
+
+    <h2> {{ user.firstName }} - {{ user.lastName }} </h2> 
+    <h3> {{ user.establishment }} </h3> 
+    <h4> {{ user.level }}  </h4> 
+  
+                       
+    <button ion-button round item-end (click)="UserSelected(user)">Ajouter</button>                      
+    </ion-item>
+    <hr>
+    
+  </ion-list> 
+  <button ion-button round color="noteyou" block item-end (click)="get()" *ngIf="hideView">voir Groupe</button>
+  <hr>
+  <ion-list *ngIf="seeViewListGroup"> 
+      
+    <p>Groupe :<strong> {{getDataN}}</strong></p>
+                                          <!-- list of all the members -->
+    <ion-item *ngFor="let item of items" class="show">
+    <h2><strong>Prénom:</strong>{{item.lastName}}<br><strong>Nom:</strong> {{item.firstName}}<br>
+      <strong>Age:</strong> {{item.age}}<br> <strong>Structure</strong>{{ item.establishment }}</h2>
+       
+
+    
+                                          <!-- delete buttons -->
+   
+    </ion-item> 
+    <button ion-button small class="suppbout" color="danger"(click)="dele()" ><p>Supprimer le groupe</p></button>  
+    <button ion-button small class="suppbout" color="danger"(click)="all()" ><p>TOUT EFFACER</p></button> 
+  </ion-list>      
+             
+                  
+                       
+  
+                       
+                       
+   
+
+    
+</ion-content>    
+
+
+

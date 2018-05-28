@@ -1,0 +1,36 @@
+.ios, .md, .wp {
+    *{
+       font-family: Verdana, Geneva, Tahoma, sans-serif
+       
+    }
+    p{
+        color:#fcfff9;
+    }
+    h1{
+        color:#fcfff9;
+    }
+    h2{
+        color:#00e7ff;
+        font-size: 1em;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    h3{
+        color:#488aff;
+    }
+    h4{
+        color:#ff9a00;
+    }
+    strong{
+        color:#ff9a00;
+    }
+    ion-content{
+        background:#488aff;
+     }
+   
+    ion-navbar{
+        background: #00e7ff;
+    }
+    
+
+}
+

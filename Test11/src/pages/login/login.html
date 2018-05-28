@@ -1,0 +1,23 @@
+
+
+<ion-content overflow-scroll="false">
+  <img src="assets/imgs/logo2.png" alt="noteyou" class="logo" >
+  <p>Se connecter</p>
+  <hr>
+  <div class="log">
+    <ion-item>
+      <ion-label floating>Email Address</ion-label>
+      <ion-input type="text" [(ngModel)]="user.email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Password</ion-label>
+      <ion-input type="password" [(ngModel)]="user.password"></ion-input>
+    </ion-item>
+  </div>
+  <p> 6 charactères au minimum.</p>
+  <button ion-button round color="noteyou"(click)="login(user)" class="login" >Se connecter</button>
+  <button ion-button block clear color="noteyou"(click)="register()">S'inscrire</button>
+  
+  <button ion-button block clear></button>
+
+

@@ -1,0 +1,63 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Profile</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+//new profile member
+<ion-content padding> 
+  
+ <!-- <button ion-button (click)="takePhoto()" > Take Photo </button></p>-->
+  <ion-item>
+    <!-- <p align="center"><img src="{{ myphoto }}"></p>-->
+    <ion-label floating>First Name</ion-label>
+    <ion-input [(ngModel)]="profile.firstName"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Last Name</ion-label>
+    <ion-input [(ngModel)]="profile.lastName"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Age</ion-label>
+    <ion-input [(ngModel)]="profile.age"></ion-input>
+  </ion-item>  
+  <ion-item>
+    <ion-label floating>Adress</ion-label>
+    <ion-input [(ngModel)]="profile.adress"></ion-input>
+  </ion-item>  
+  <ion-item>
+    <ion-label floating>PhoneNumber</ion-label>
+    <ion-input [(ngModel)]="profile.phoneNumber"></ion-input>
+  </ion-item>  
+  <ion-item>
+    <ion-label floating>Level</ion-label>
+    <ion-input [(ngModel)]="profile.level"></ion-input>
+  </ion-item>  
+  <ion-item>
+    <ion-label floating>Identification</ion-label>
+    <ion-input [(ngModel)]="profile.identification"></ion-input>
+  </ion-item>  
+  <ion-item>
+    <ion-label floating>Establishment</ion-label>
+    <ion-input [(ngModel)]="profile.establishment"></ion-input>
+  </ion-item>  
+
+  <button ion-button clear block (click)="createProfile(profile)">Create Profile</button>
+  
+  <button ion-button clear block (click)="reset()">reset</button>
+  
+  
+
+  
+
+
+
+
+ 
+
+ 
+</ion-content>

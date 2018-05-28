@@ -1,0 +1,36 @@
+page-login {
+    
+    .logo{
+        width: 50%;
+        height:25%;
+        margin-left: 25%;
+        margin-top: 10%;
+    }
+
+    ion-item{
+        border-radius:5px;       
+    }
+    .log{
+        border: 5px solid #00e7ff; 
+
+        margin-left:10%;
+        margin-top:5px;
+        width: 80%;
+    }
+    .login{
+        width:50%;
+        margin-left:25%;
+    }
+   
+   p {
+       color:#1d8eff;
+       font-style: initial;
+       font-size: 15px;
+       margin-left: 10%;      
+   }
+   #signButton {
+       width: 20%;
+       margin-left:40%;
+   }
+
+}
